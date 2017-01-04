@@ -3,12 +3,11 @@
           package="com.solitudeycq.diycode">
 
     <application
-        android:allowBackup="true"
+        android:name=".app.AppApplication"
         android:icon="@drawable/diycode_icon"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
