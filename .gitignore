@@ -41,3 +41,10 @@ captures/
 
 # Mac OS
 .DS_Store
+
+# idea project files
+.idea/
+.idea/.name
+*.iml
+*.ipr
+*.iws
