@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'DIYCODE_APPLICATION_ID', DiyCodeApplicationID
+        it.buildConfigField 'String', 'DIYCODE_PRIVATE_KEY', DiyCodePrivateKey
+    }
 }
 
 repositories {
