@@ -6,4 +6,6 @@ package com.solitudeycq.diycode.presenter;
  */
 
 public interface ILoginPresenter {
+    void success();
+    void faild(String errMessage);
 }
