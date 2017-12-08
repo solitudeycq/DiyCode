@@ -19,8 +19,8 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-  private static final String TAG = MainActivity.class.getSimpleName();
-  private TextView mTextView;
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
         token.execute();
     }
 
-    class TokenFetch extends AsyncTask<Void,Void,String>{
+    class TokenFetch extends AsyncTask<Void, Void, String> {
 
         @Override
         protected String doInBackground(Void... params) {
             OkHttpClient client = new OkHttpClient();
             RequestBody formBody = new FormBody.Builder()
                     .add("client_id", BuildConfig.DIYCODE_APPLICATION_ID)
-                    .add("client_secret",BuildConfig.DIYCODE_PRIVATE_KEY)
-                    .add("grant_type","password")
-                    .add("password","solitude1")
-                    .add("username","solitudeycq")
+                    .add("client_secret", BuildConfig.DIYCODE_PRIVATE_KEY)
+                    .add("grant_type", "password")
+                    .add("password", "solitude1")
+                    .add("username", "solitudeycq")
                     .build();
             Request request = new Request.Builder()
                     .url("https://www.diycode.cc/oauth/token")
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     return response.body().string();
-                }else {
-                    return response.code()+"";
+                } else {
+                    return response.code() + "";
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            if(s!=null&&s.length()!=0){
+            if (s != null && s.length() != 0) {
                 mTextView.setText(s);
             }
         }

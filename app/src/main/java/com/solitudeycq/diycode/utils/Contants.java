@@ -7,7 +7,7 @@ import com.solitudeycq.diycode.BuildConfig;
  */
 
 public class Contants {
-  public static String DIYCODE_APPLICATION_ID = BuildConfig.DIYCODE_APPLICATION_ID;
-  public static String DIYCODE_PRIVATE_KEY = BuildConfig.DIYCODE_PRIVATE_KEY;
+    public static String DIYCODE_APPLICATION_ID = BuildConfig.DIYCODE_APPLICATION_ID;
+    public static String DIYCODE_PRIVATE_KEY = BuildConfig.DIYCODE_PRIVATE_KEY;
 
 }
